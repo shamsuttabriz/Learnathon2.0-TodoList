@@ -3,6 +3,7 @@ import Dashboard from './pages/Dashboard';
 import Sign_in from './pages/Sign_in';
 import Nav from './Nav';
 import Todos from './pages/Todos';
+import Footer from './Footer';
 
 function App() {
 	return (
@@ -17,6 +18,9 @@ function App() {
 					<Route path="/" element={<Sign_in />} />
 				</Routes>
 			</main>
+			<footer>
+				<Footer />
+			</footer>
 		</BrowserRouter>
 	)
 }

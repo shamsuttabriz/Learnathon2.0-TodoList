@@ -1,10 +1,9 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { Navigate } from "react-router-dom";
-import { allTodosCount, getDueTodos, getCompletedTodos } from "./todos/data";
+import { allTodosCount, getDueTodos, getCompletedTodos } from "./storage/data";
 
 const Profile = () => {
 	const { user, isAuthenticated, isLoading } = useAuth0();
-
 
 	if (isLoading) {
 		return <div>Loading ...</div>;
@@ -31,7 +30,7 @@ export default function Dashboard() {
 	}
 
 	return (
-		<div className="bg-slate-600 text-white py-6 px-10 space-y-3 rounded-xl">
+		<div className="bg-slate-600 text-white p-10 space-y-3 rounded-xl">
 			<div className="flex justify-between space-y-4 items-center">
 				<div className="text-3xl">
 					Welcome to,
@@ -50,13 +49,13 @@ export default function Dashboard() {
 			<Profile />
 			<div className="flex justify-between text-2xl pt-4">
 				<div className="text-blue-300">
-					Total: {allTodosCount(user.nickname)}
+					Total Task: {allTodosCount(user.nickname)}
 				</div>
 				<div className="text-green-300">
-					Completed: {getCompletedTodos(user.nickname).length}
+					Completed Task: {getCompletedTodos(user.nickname).length}
 				</div>
 				<div className="text-red-300">
-					Due: {getDueTodos(user.nickname).length}
+					Due Task: {getDueTodos(user.nickname).length}
 				</div>
 			</div>
 		</div>

@@ -16,19 +16,19 @@ export default function Nav() {
 								<NavLink
 									to="/dashboard"
 									className={({ isActive }) => isActive ?
-														 "bg-white px-3 py-3.5 rounded text-slate-600"
-														 : "px-3 py-2"}
+										"bg-white px-3 py-3.5 rounded text-slate-600"
+										: "px-3 py-2"}
 								>
 									Dashboard
 								</NavLink>
 								<NavLink to="/todos" className={({ isActive }) => isActive ?
-																								"bg-white text-slate-600 px-3 py-[0.95rem] rounded"
-																								: "px-3 py-2"}
+									"bg-white text-slate-600 px-3 py-[0.95rem] rounded"
+									: "px-3 py-2"}
 								>
 									Todos
 								</NavLink>
 							</div>
-								)
+						)
 						:
 						(
 							<div></div>
