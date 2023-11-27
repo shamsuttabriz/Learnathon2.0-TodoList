@@ -48,7 +48,7 @@ const DueTodos = () => {
 				<div className="bg-slate-600 mb-5 flex justify-between items-center">
 					<div className="text-4xl font-semibold text-slate-200 ">To-Do List</div>
 					<button
-						className='bg-white px-4 py-2 rounded-md text-slate-800'
+						className='bg-white px-4 font-semibold py-2 rounded-md text-slate-800'
 						onClick={() => logout(() => logout({ logoutParams: { returnTo: window.location.origin } }))}
 					>
 						Logout
@@ -58,7 +58,7 @@ const DueTodos = () => {
 					<input ref={inputRef} type="text" className='w-10/12 text-slate-600 bg-slate-200 py-3 px-6 focus:outline-none text-lg font-medium rounded-l-sm rounded-r-none placeholder:text-slate-400' placeholder='Enter your task ' />
 					<button onClick={() => addTask()} className='w-64 font-semibold rounded-r-sm text-lg bg-slate-900 text-slate-200 p-3' type='submit'>Add Task</button>
 				</div>
-				<div className="text-2xl font-semibold my-3  bg-slate-900 text-slate-200 p-3 pl-5 rounded-sm">
+				<div className="text-xl font-semibold my-3  bg-slate-900 text-slate-200 p-3 pl-5 rounded-sm">
 					Due Todos
 				</div>
 				<div className="space-y-2">
@@ -73,7 +73,7 @@ const DueTodos = () => {
 						})
 					}
 				</div>
-				<div className="text-2xl font-semibold my-3  bg-slate-900 text-slate-200 p-3 pl-5 rounded-sm">
+				<div className="text-xl font-semibold my-3  bg-slate-900 text-slate-200 p-3 pl-5 rounded-sm">
 					Completed Todos
 				</div>
 				<div className="space-y-2">

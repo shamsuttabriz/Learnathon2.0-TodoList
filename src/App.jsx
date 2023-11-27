@@ -1,15 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Dashboard from './pages/Dashboard';
-import Sign_in from './pages/Sign_in';
-import Nav from './Nav';
-import Todos from './pages/Todos';
-import Footer from './Footer';
+import Dashboard from './Content/pages/Dashboard';
+import Sign_in from './Content/pages/Sign_in';
+import Header from './Header/Header';
+import Todos from './Content/pages/Todos';
+import Footer from './Footer/Footer';
 
 function App() {
 	return (
 		<BrowserRouter>
 			<header>
-				<Nav />
+				<Header />
 			</header>
 			<main className="w-2/3 mx-auto mt-10">
 				<Routes>

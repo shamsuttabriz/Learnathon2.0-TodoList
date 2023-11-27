@@ -39,7 +39,7 @@ export default function Dashboard() {
 					</span>
 				</div>
 				<button
-					className='bg-white px-4 py-2 rounded-md text-slate-800'
+					className='bg-white px-4 font-semibold py-2 rounded-md text-slate-800'
 					onClick={() => logout(() => logout({ logoutParams: { returnTo: window.location.origin } }))}
 				>
 					Logout

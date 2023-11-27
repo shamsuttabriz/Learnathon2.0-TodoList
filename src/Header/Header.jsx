@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 
-export default function Nav() {
+export default function Header() {
 	const { isAuthenticated, logout } = useAuth0();
 	return (
 		<nav className="flex justify-between h-12 items-center px-16 md:px-20 lg:px-32 py-3 bg-slate-600 shadow shadow-slate-600">
