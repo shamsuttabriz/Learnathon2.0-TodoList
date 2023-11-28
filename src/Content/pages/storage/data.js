@@ -34,7 +34,7 @@ export function getTodoByTask(username, task) {
 export function deleteTodo(username, id) {
 	var todos = getAllTodos(username);
 
-	todos = todos.filter((todo) => todo.id != id)
+	todos = todos.filter((todo) => id != todo.id)
 
 	return true;
 }
