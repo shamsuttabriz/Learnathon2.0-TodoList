@@ -36,7 +36,7 @@ export function deleteTodo(username, id) {
 
 	todos = todos.filter((todo) => id != todo.id)
 
-	return true;
+	setAllTodos(username, todos);
 }
 
 export function deleteAllTodos(username) {
