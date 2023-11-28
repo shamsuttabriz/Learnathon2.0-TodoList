@@ -33,13 +33,9 @@ export function getTodoByTask(username, task) {
 
 export function deleteTodo(username, id) {
 	var todos = getAllTodos(username);
-	var todo = getTodoById(username, id);
-	if (todo == undefined) {
-		return false;
-	}
-	var index = todos.indexOf(todo);
-	todos.splice(index, 1);
-	setAllTodos(username, todos);
+
+	todos = todos.filter((todo) => todo.id != id)
+
 	return true;
 }
 
