@@ -22,6 +22,7 @@ const DueTodos = () => {
 		appendTodo(user.nickname, inputValue);
 		setDueTodos(getDueTodos(user.nickname));
 		inputRef.current.value = "";
+
 	}
 
 	const completeTask = (id) => {
@@ -53,10 +54,10 @@ const DueTodos = () => {
 					Logout
 				</button>
 			</div>
-			<div className="w-full flex justify-between items-center">
+			<form className="w-full flex justify-between items-center">
 				<input ref={inputRef} type="text" className='w-10/12 text-slate-600 bg-slate-200 py-3 px-6 focus:outline-none text-lg font-medium rounded-l-sm rounded-r-none placeholder:text-slate-400' placeholder='Enter your task ' />
-				<button onClick={() => addTask()} className='w-64 font-semibold rounded-r-sm text-lg bg-slate-900 text-slate-200 p-3' type='submit'>Add Task</button>
-			</div>
+				<button onClick={(e) => { e.preventDefault(); addTask() }} className='w-64 font-semibold rounded-r-sm text-lg bg-slate-900 text-slate-200 p-3' type='submit'>Add Task</button>
+			</form>
 			<div className="text-xl font-semibold my-3  bg-slate-900 text-slate-200 p-3 pl-5 rounded-sm">
 				Due Todos
 			</div>
